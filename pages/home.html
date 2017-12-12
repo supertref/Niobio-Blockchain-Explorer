@@ -131,12 +131,12 @@
                 <div class="input-group">
                     <a id="prev-page" href="#" class="btn btn-default input-group-addon"><i class="fa fa-arrow-left"
                                                                                             aria-hidden="true"></i>
-                        <span class="large-screen">Старіші</span></a>
+                        <span class="large-screen">Antigos</span></a>
                     <span class="input-group-addon">№</span>
-                    <input id="goto-height" type="text" class="form-control" placeholder="Висота">
-                    <a id="goto-height-go" href="#" class="btn btn-default input-group-addon">Йти</a>
+                    <input id="goto-height" type="text" class="form-control" placeholder="Bloco">
+                    <a id="goto-height-go" href="#" class="btn btn-default input-group-addon">Atual</a>
                     <a id="next-page" href="#" class="btn btn-default input-group-addon disabled"><span
-                            class="large-screen">Новіші</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            class="large-screen">Novos</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -149,7 +149,6 @@
                     <th><i class="fa fa-clock-o"></i> Data/Hora</th>
                     <th><i class="fa fa-archive"></i> Quantidade</th>
                     <th><i class="fa fa-paw"></i> Hash</th>
-                    <th><i class="fa fa-unlock-alt"></i> Dificuldade</th>
                     <th><i class="fa fa-bars"></i> Transações</th>
                 </tr>
                 </thead>
@@ -197,7 +196,7 @@
             updateText('networkHashrate', getReadableHashRateString(lastStats.difficulty / blockTargetInterval));
             updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 0).toString());
             $("time.timeago").timeago();
-            getPoolTransactions();
+            //getPoolTransactions();
             var currHeight = $('#blocks_rows').children().first().data('height');
             if ((currHeight + 31) > lastStats.last_known_block_index) {
                 $.when(
@@ -417,7 +416,7 @@
             '<td class="date-time">' + formatDate(block.timestamp) + ' (<time class="timeago" datetime="' + dateTime + '"></time>)</td>' +
             '<td>' + block.cumul_size + '</td>' +
             '<td>' + formatBlockLink(block.hash) + '</td>' +
-            '<td class="blk-diff">' + block.difficulty + '</td>' +
+            //'<td class="blk-diff">' + block.difficulty + '</td>' +
             '<td>' + block.tx_count + '</td>';
 
         Difficulties.push(parseInt(block.difficulty));
@@ -501,7 +500,6 @@
             dataType: 'text',
             cache: 'false',
             success: function (data) {
-
                 var txsRows = document.getElementById('mem_pool_rows');
                 while (txsRows.firstChild) {
                     txsRows.removeChild(txsRows.firstChild);
@@ -546,7 +544,7 @@
                 {
                     data: [].concat(Blocks).reverse(),
                     yAxisID: "Height",
-                    label: "№ блоку",
+                    label: "Bloco",
                     backgroundColor: "rgba(0,0,0,0)",
                     borderColor: 'rgba(0,0,0,0)',
                     borderWidth: 0,
@@ -558,7 +556,7 @@
                 }, {
                     data: [].concat(Difficulties).reverse(),
                     yAxisID: "Difficulty",
-                    label: "Складність",
+                    label: "Dificuldade",
                     backgroundColor: "rgba(220,220,220,0.3)",
                     borderColor: '#2FA4E7',
                     borderWidth: 2,
@@ -573,7 +571,7 @@
                 }, {
                     data: [].concat(Txses).reverse(),
                     yAxisID: "Transactions",
-                    label: "Транзакції",
+                    label: "Transações",
                     backgroundColor: "rgba(255,242,0,0.05)",
                     borderColor: '#B5E61D',
                     borderWidth: 1,
@@ -588,7 +586,7 @@
                 }, {
                     data: [].concat(Sizes).reverse(),
                     yAxisID: "Sizes",
-                    label: "Розмір",
+                    label: "Tamanhos",
                     backgroundColor: "rgba(65,172,0,0.05)",
                     borderColor: '#99D9EA',
                     borderWidth: 1,

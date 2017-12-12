@@ -267,29 +267,29 @@
 
         jQuery.timeago.settings.strings = {
             prefixAgo: null,
-            prefixFromNow: "через",
-            suffixAgo: "тому",
+            prefixFromNow: "agora",
+            suffixAgo: "atrás",
             suffixFromNow: null,
-            seconds: "мить",
-            minute: "хвилина",
+            seconds: "segundos",
+            minute: "minutos",
             minutes: function (value) {
-                return numpf(value, "%d хвилина", "%d хвилини", "%d хвилин");
+                return numpf(value, "%d min", "%d min", "%d min");
             },
-            hour: "година",
+            hour: "hora",
             hours: function (value) {
-                return numpf(value, "%d година", "%d години", "%d годин");
+                return numpf(value, "%d h", "%d h", "%d h");
             },
-            day: "день",
+            day: "dia",
             days: function (value) {
-                return numpf(value, "%d день", "%d дні", "%d днів");
+                return numpf(value, "%d dias", "%d dias", "%d dias");
             },
-            month: "місяць",
+            month: "mes",
             months: function (value) {
-                return numpf(value, "%d місяць", "%d місяці", "%d місяців");
+                return numpf(value, "%d meses", "%d meses", "%d meses");
             },
-            year: "рік",
+            year: "ano",
             years: function (value) {
-                return numpf(value, "%d рік", "%d роки", "%d років");
+                return numpf(value, "%d anos", "%d anos", "%d anos");
             }
         };
     })();

@@ -16,7 +16,7 @@ $result = curl_exec($ch);
 // print_r($result);
 
 // Decode the response
-$responseData = json_decode($result, TRUE);
+$responseData = json_decode($result, true);
 
 // Print the date from the response
 // print_r($responseData);
@@ -41,7 +41,7 @@ curl_setopt($ch2, CURLOPT_HTTPHEADER, array(
 $block = curl_exec($ch2);
 
 // Decode the response
-$blockData = json_decode($block, TRUE);
+$blockData = json_decode($block, true);
 
 //print_r($blockData);
 
@@ -52,4 +52,3 @@ $supply  = number_format($supply / 1000000000000, 12, ".", "");
 print_r($supply);
 
 curl_close($ch2);
-?>
