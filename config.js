@@ -1,6 +1,6 @@
 var api = 'http://138.197.222.188:8314';
 var blockTargetInterval = 240;
-var coinUnits = 1000000000000;
+var coinUnits = 100000000;
 var symbol = 'NBR';
 var refreshDelay = 30000;
 

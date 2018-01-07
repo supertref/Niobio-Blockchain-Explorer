@@ -17,9 +17,10 @@ if ($_GET['method'] === '/getinfo') {
 if ($_GET['method'] === '/json_rpc') {
     $json = json_encode($_POST);
     $vars = key(json_decode($json, true));
-    $data_string = $vars;
-
+    $data_string = file_get_contents('php://input');
+    
     $ch = curl_init($api . '/json_rpc');
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -28,6 +29,8 @@ if ($_GET['method'] === '/json_rpc') {
             'Content-Length: ' . strlen($data_string))
     );
     $result = curl_exec($ch);
+
+    curl_close($ch);
 
     echo $result;
 }
