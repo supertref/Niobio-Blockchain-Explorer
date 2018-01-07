@@ -10,25 +10,25 @@
                         <ul class="nav nav-pills nav-stacked">
 
                             <li><a href="#" data-toggle="tooltip" data-placement="top"
-                                   data-original-title="Висота блокчейну, тобто загальна кількість блоків у ланцюжку блоків, включно з нульовим."><i
+                                   data-original-title="A altura do bloqueio, ou seja, o número total de blocos na cadeia de blocos, incluindo zero."><i
                                     class="fa fa-bars"></i> Altura: <span id="networkHeight"></span></a></li>
 
                             <li><a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   data-original-title="Кількість проведених транзакцій у мережі (не враховуючи виплати винагороди за карбування)."><i
+                                   data-original-title="O número de transações realizadas na rede (excluindo o pagamento de remuneração por quarentena)."><i
                                     class="fa fa fa-exchange"></i> Transações: <span
                                     id="networkTransactions"></span></a></li>
 
 
                             <li><a href="#" data-toggle="tooltip" data-placement="top"
-                                   data-original-title="Поточна винагорода (за останній викарбуваний блок)."><i
+                                   data-original-title="Recompensa atual (para o último bloco carimbado)."><i
                                     class="fa fa-certificate"></i> Último: <span id="currentReward"></span></a></li>
 
                             <li><a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   data-original-title="Кількість карбованців, випущена в обіг."><i
+                                   data-original-title="O número de NBR emitidos em circulação."><i
                                     class="fa fa-money"></i> Total: <span id="totalCoins"></span></a></li>
 
                             <li><a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   data-original-title="Співідношення кількості карбованців, випущених в обіг до запланованої початкової кількості."><i
+                                   data-original-title="A proporção do número de rublos emitidos em circulação para o número inicial planejado."><i
                                     class="fa fa-percent" aria-hidden="true"></i> Emissão: <span
                                     id="emissionPercent"></span> %</a></li>
 
@@ -38,25 +38,25 @@
                         <ul class="nav nav-pills nav-stacked">
 
                             <li><a href="#" data-toggle="tooltip" data-placement="top"
-                                   data-original-title="Складність для наступного блоку. Це коефіцієнт, при якому за поточної швидкості хешування, блок буде карбуватися з інтервалом&nbsp;4&nbsp;хв."><i
+                                   data-original-title="Complexidade para o próximo bloco. Esta é a razão na qual, na taxa de hash atual, o bloco será encaminhado a intervalos&nbsp;4&nbsp;min."><i
                                     class="fa fa-unlock-alt"></i> Dificuldade: <span id="networkDifficulty"></span></a>
                             </li>
 
                             <li><a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   data-original-title="Середня складність за період останніх 30 блоків."><i
+                                   data-original-title="A complexidade média dos últimos 30 blocos."><i
                                     class="fa fa-lock"></i> Média: <span id="avgDifficulty"></span></a></li>
 
 
                             <li><a href="#" data-toggle="tooltip" data-placement="top"
-                                   data-original-title="Розрахункова поточна швидкість операцій хешування в мережі. Розраховується на основі поточної складності."><i
+                                   data-original-title="Velocidade estimada atual das operações de hashing de rede. Calculado com base na complexidade atual."><i
                                     class="fa fa-tachometer"></i> Hashrate: <span id="networkHashrate"></span></a></li>
 
                             <li><a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   data-original-title="Розрахункова швидкість операцій хешування в мережі. Розраховується на основі середньої складності."><i
+                                   data-original-title="Velocidade estimada das operações de hashing de rede. Calculado com base na complexidade média."><i
                                     class="fa fa-clock-o"></i> Média: <span id="avgHashrate"></span></a></li>
 
                             <li><a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   data-original-title="Розрахунковий час знаходження блоку при поточній складності і розрахунковій швидкості мережі."><i
+                                   data-original-title="O tempo estimado de encontrar a unidade na atual complexidade e a velocidade de rede calculada."><i
                                     class="fa fa-circle-o-notch" aria-hidden="true"></i> Tempo de Resolução: <span
                                     id="blockSolveTime"></span></a></li>
 
@@ -75,7 +75,7 @@
                 <h3 class="panel-title"><i class="fa fa-area-chart" aria-hidden="true"></i> Horário
 
                     <span class="text-default" data-toggle="tooltip" data-placement="right"
-                          data-original-title="Графік складності на основі останніх блоків, з нижче наведеного списку. Винагорода за блок. Розмір блоку. К-ть транзакцій у блоці. Додайте більше блоків аби збільшити діапазон графіку."><i
+                          data-original-title="Cronograma de complexidade com base nos últimos blocos da lista abaixo. Recompensa pelo bloco. Tamanho do bloco Número de transações no bloco. Adicione mais blocos para aumentar o alcance dos gráficos."><i
                             class="fa fa-question-circle"></i></span>
                 </h3>
 
@@ -93,7 +93,7 @@
         <h3 class="panel-title"><i class="fa fa-exchange fa-fw" aria-hidden="true"></i> Transações não confirmadas
             <span id="mempool_count" class="badge"></span>
             <span class="text-default" data-toggle="tooltip" data-placement="right"
-                  data-original-title="Свіжі транзакції які ще потрапили у блок та очікують підтвердження. Коли потраплять - стануть підтвердженими."><i
+                  data-original-title="Novas transações que ainda estão no bloco e aguardam confirmação. Quando eles cairem, eles serão confirmados."><i
                     class="fa fa-question-circle"></i></span>
         </h3>
 
@@ -133,7 +133,7 @@
                                                                                             aria-hidden="true"></i>
                         <span class="large-screen">Antigos</span></a>
                     <span class="input-group-addon">№</span>
-                    <input id="goto-height" type="text" class="form-control" placeholder="Bloco">
+                    <input id="goto-height" type="text" class="form-control" placeholder="Altura">
                     <a id="goto-height-go" href="#" class="btn btn-default input-group-addon">Atual</a>
                     <a id="next-page" href="#" class="btn btn-default input-group-addon disabled"><span
                             class="large-screen">Novos</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -240,10 +240,10 @@
                     }),
                     dataType: 'json',
                     cache: 'false',
-                    success: function (data) {
+                    success: function (data) {                    
                         block = data.result.block;
                         updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins, 2));
-                        updateText('emissionPercent', (block.alreadyGeneratedCoins / 10000000000000000000 * 100).toFixed(4));
+                        updateText('emissionPercent', ((block.alreadyGeneratedCoins/coinUnits) / 336000000 * 100).toFixed(4));
                         updateText('currentReward', getReadableCoins(block.baseReward, 4));
                     }
                 });
@@ -484,7 +484,7 @@
 
     }
 
-    //  Karbovanets MemPool Transactions
+    //  NiobioCash MemPool Transactions
     function getPoolTransactions() {
 
         var xhrGetPool = $.ajax({
@@ -622,7 +622,7 @@
                     position: 'left',
                     scaleLabel: {
                         display: false,
-                        labelString: '№ блоку'
+                        labelString: '№ Bloco'
                     },
                     gridLines: {
                         display: false
@@ -638,7 +638,7 @@
                     position: 'left',
                     scaleLabel: {
                         display: false,
-                        labelString: 'Складність'
+                        labelString: 'Dificuldade'
                     },
                     gridLines: {
                         display: false
@@ -654,7 +654,7 @@
                     position: 'right',
                     scaleLabel: {
                         display: false,
-                        labelString: 'К-ть транзакцій'
+                        labelString: '№ de transações'
                     },
                     gridLines: {
                         display: false
@@ -670,7 +670,7 @@
                     position: 'right',
                     scaleLabel: {
                         display: false,
-                        labelString: 'Розмір'
+                        labelString: 'Tamanho'
                     },
                     gridLines: {
                         display: false
@@ -723,7 +723,7 @@
                     title: function (tooltipItem, data) {
                         var height = data.datasets[3].data[tooltipItem[0].index];
                         var time = new Date(data.labels[tooltipItem[0].index]).toLocaleString();
-                        //return 'Блок №: ' + height + ' - ' + time + '';
+                        //return 'O bloco №: ' + height + ' - ' + time + '';
                         return time + '';
                     }, /*
 					label: function(tooltipItem, data) { 
@@ -739,9 +739,9 @@
 						
 						var multistringText = [];
   
-						var str1 = diff_swatch + 'Складність: ' + diff + '';
-						var str2 = 'Розмір: ' + size + '';
-						var str3 = 'Транзакції: ' + txcount + '';
+						var str1 = diff_swatch + 'Dificuldade: ' + diff + '';
+						var str2 = 'Tamanho: ' + size + '';
+						var str3 = 'Transações: ' + txcount + '';
   
 						multistringText.push(str1);
 						multistringText.push(str2);
@@ -808,8 +808,8 @@
     });
 
     function getReadableTime(seconds) {
-        var units = [[60, 'сек.'], [60, 'хв.'], [24, 'год.'],
-            [7, 'д.'], [4, 'тижд.'], [12, 'міс.'], [1, 'р.']];
+        var units = [[60, 'seg.'], [60, 'min.'], [24, 'ano.'],
+            [7, 'd.'], [4, 'semana.'], [12, 'mês.'], [1, 'р.']];
 
         function formatAmounts(amount, unit) {
             var rounded = Math.round(amount);

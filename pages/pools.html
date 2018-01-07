@@ -18,38 +18,34 @@
 	}
 </style>
 
-
-	<div class="row">
-		<div class="col-lg-12">
+<div class="container">
+        <div class="row">
+			<div class="col-lg-12">
 			<div class="blocksStatHolder">
-				<span><i class="fa fa-tachometer"></i> Швидкість мережі*: <span id="totalPoolsHashrate"></span></span>
+				<span><i class="fa fa-tachometer"></i> Network hashrate*: <span id="totalPoolsHashrate"></span></span>
 			</div>
 		</div>
-	</div>
-
-<div class="container">
-	<div class="row">
-		<div class="table-responsive">
-			<table id="network-hash" class="table table-hover">
-				<thead>
-					<tr id="pools_header">
-						<th><span id="symbol"></span> Пули</th>
-						<th><i class="fa fa-bars"></i> Висота</th>
-						<th><i class="fa fa-tachometer"></i> Хешрейт</th>
-						<th><i class="fa fa-group"></i> Майнери</th>
-						<th><i class="fa fa-money"></i> Комісія</th>
-						<th><i class="fa fa-sign-out"></i> Мін. виплата</th>
-						<th><i class="fa fa-clock-o"></i> Останній блок</th>
-					</tr>
-				</thead>
-				<tbody id="pools_rows">
-				</tbody>
-			</table>
-		</div>
-	</div>
 </div>
 
+<br />
 
+<div class="table-responsive">
+    <table id="network-hash" class="table table-hover">
+        <thead>
+            <tr>
+                <th><span id="symbol"></span> Pools</th>
+                <th><i class="fa fa-bars"></i> Height</th>
+                <th><i class="fa fa-tachometer"></i> Hashrate</th>
+                <th><i class="fa fa-group"></i> Miners</th>
+                <th><i class="fa fa-money"></i> Total Fee</th>
+				<th><i class="fa fa-sign-out"></i> Min. Payout</th>
+                <th><i class="fa fa-clock-o"></i> Último bloco encontrado</th>
+            </tr>
+        </thead>
+        <tbody id="pools_rows">
+        </tbody>
+    </table>
+</div>
 
 
 <div class="container">
@@ -65,13 +61,12 @@
 <div class="container">
         <div class="row">
 			<div class="col-lg-12">
-				<small>* Загальна швидкість усіх відомих пулів, перелічених вище.</small>
+				<small>* Total acumulado .</small>
 			</div>
 		</div>
 </div>
 
-
-<script src="js/Chart.bundle.min.js"></script>
+<script src="/js/Chart.bundle.min.js"></script>
 <script>
 window.NETWORK_STAT_MAP = new Map(networkStat[symbol.toLowerCase()]);
 window.poolNames = [];
@@ -146,7 +141,7 @@ function displayChart() {
 	var options = {
 			title: {
 				display: true,
-				text: 'Швидкість пулів'
+				text: 'Pools Hashrate'
 			},
 			tooltips: {
                 enabled: true,
@@ -177,8 +172,7 @@ setInterval(function(){
 		var poolsRefreshed = 0;
 		
             NETWORK_STAT_MAP.forEach((url, host, map) => {
-				
-				var index = host.indexOf("/");
+                var index = host.indexOf("/");
 				var result;
 				if (index < 0) {
 					result = host;

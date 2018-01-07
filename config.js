@@ -1,4 +1,4 @@
-var api = '/api/?method=';
+var api = 'http://138.197.222.188:8314';
 var blockTargetInterval = 240;
 var coinUnits = 1000000000000;
 var symbol = 'NBR';
