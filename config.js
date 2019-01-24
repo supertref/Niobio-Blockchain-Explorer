@@ -1,7 +1,7 @@
-var api = 'http://138.197.222.188:8314';
+var api = 'http://13.81.27.250:8314';
 var blockTargetInterval = 240;
 var coinUnits = 100000000;
-var symbol = 'NBR';
+var symbol = 'IMKO';
 var refreshDelay = 30000;
 
 // pools stats by MainCoins
